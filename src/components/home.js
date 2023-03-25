@@ -47,7 +47,7 @@ export default function Home() {
                 <Header />
             </div>
             <div className='row'>
-                <div className='col-md-2' style={{"background-color":"aliceblue"}}><NavBar country={selectedCountry} /></div>
+                <div className='col-md-2' style={{"background-color":"#333"}}><NavBar country={selectedCountry} /></div>
                 <div className="col-md-1 vl"></div>
                 <div className='col-md-8 main-container'>
                     <div className="row">
@@ -93,7 +93,7 @@ export default function Home() {
                             {persona === "Researcher" &&
                                 <div className="annotation">
 
-                                    <h4>Click on the chart to write an annotation. The annotations are displayed below:</h4>
+                                    {/* <h4>Click on the chart to write an annotation. The annotations are displayed below:</h4> */}
                                     <div>
                                         {annotations}
                                     </div>

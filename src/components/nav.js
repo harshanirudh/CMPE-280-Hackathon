@@ -80,9 +80,9 @@ const NavBar = (props) => {
                 </div>
                 <div className='nav-main-elements'>Crops
                 <li>
-                    <Link to="/bananas">Banans</Link></li>
+                    <Link to="/bananas">Bananas</Link></li>
                     <li>
-                    <Link to="/mangos">Mangos</Link></li>
+                    <Link to="/mangos">Mangoes</Link></li>
                     <li>
                     <Link to="/walnuts">Walnuts</Link></li>
                 </div>
