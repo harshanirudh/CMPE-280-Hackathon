@@ -5,7 +5,7 @@ const Header = () => {
                     {/* <span>MRFS</span> */}
                 </div>
                 <div className="col-md-8 header-elements">
-                    <span>Food Security and Data Sensors Dashboard</span>
+                    <span>Food Security And Data Sensors Dashboard</span>
                 </div>
             </div>
     )
