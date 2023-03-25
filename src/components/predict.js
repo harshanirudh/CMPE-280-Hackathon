@@ -69,7 +69,7 @@ const Predict = () => {
                 <Header />
             </div>
             <div className='row'>
-                <div className='col-md-3' style={{"background-color":"#333"}}><NavBar /></div>
+                <div className='col-md-2' style={{"background-color":"#333"}}><NavBar /></div>
                 <div className="col-md-1 vl"></div>
 
                 <div className='col-md-8'>

@@ -8,7 +8,7 @@ import FoodChartPage from './components/foodchartpage';
 import Predict from './components/predict';
 import Bananas from './components/bananas';
 import Walnuts from './components/walnuts';
-import Mangos from './components/mangos';
+import Mangoes from './components/mangos';
 
 function App() {
   return (
@@ -20,7 +20,7 @@ function App() {
           <Route path="/imports" element={<FoodChartPage />}></Route>
           <Route path="/yield" element={<Predict />}></Route>
           <Route path="/bananas" element={<Bananas />}></Route>
-          <Route path="/mangos" element={<Mangos />}></Route>
+          <Route path="/mangos" element={<Mangoes />}></Route>
           <Route path="/walnuts" element={<Walnuts />}></Route>
 
         </Routes>

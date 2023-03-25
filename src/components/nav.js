@@ -79,8 +79,6 @@ const NavBar = (props) => {
                     <Link to="/yield">Yield</Link>
                 </div>
                 <div className='nav-main-elements'>Crops
-                <li>
-                    <Link to="/bananas">Bananas</Link></li>
                     <li>
                     <Link to="/mangos">Mangoes</Link></li>
                     <li>

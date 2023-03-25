@@ -3,7 +3,7 @@ import NavBar from "./nav";
 import '../App.css';
 
 
-const Mangos = () => {
+const Mangoes = () => {
 
     return (
         <div>
@@ -11,7 +11,7 @@ const Mangos = () => {
                 <Header />
             </div>
             <div className='row'>
-                <div className='col-md-3' style={{"background-color":"#333"}}><NavBar /></div>
+                <div className='col-md-2' style={{"background-color":"#333"}}><NavBar /></div>
                 <div className="col-md-1 vl"></div>
 
                 <div className='col-md-8'>
@@ -43,4 +43,4 @@ export const PopUpContainer = (props) => {
     )
 }
 
-export default Mangos;
+export default Mangoes;
