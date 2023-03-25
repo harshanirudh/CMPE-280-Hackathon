@@ -42,7 +42,7 @@ export default function Home() {
       </div>
       <div className="row">
         <div className="col-md-2" style={{ "background-color": "#333" }}>
-          <NavBar country={selectedCountry} range={range} />
+          <NavBar country={selectedCountry} />
         </div>
         <div className="col-md-1 vl"></div>
         <div className="col-md-8 main-container">
