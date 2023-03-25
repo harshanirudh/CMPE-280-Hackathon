@@ -4,7 +4,8 @@
 
 .nav-main-elements{
     margin: 30px;
-    font-size: 12px;
+    font-size: 15px;
+    background-color: #aed7f0;
 }
 
 .vl {
@@ -18,8 +19,8 @@
 
 .header-elements{
     padding: 10px;
-    font-size: 17px;
-    font-weight: bold;
+    font-size: 25px;
+    font-weight: bolder;
 }
 
 .main-container{

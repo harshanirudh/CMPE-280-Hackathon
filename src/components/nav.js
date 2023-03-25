@@ -47,7 +47,7 @@ const NavBar = (props) => {
         <div>
             <div className="Macro">
                 <div className='nav-main-elements'>
-                    <Link to="/home"><h6>Macroeconomic(USD)</h6></Link>
+                    <Link to="/home"><h6>Macroeconomic (USD)</h6></Link>
                     <DndProvider backend={HTML5Backend}>
                         <div className='pets'>
                             {macroeconomic.map(mc => <MenuCard draggable id={mc.id} name={mc.name} chart={mc.chart} />)}

@@ -47,7 +47,7 @@ export default function Home() {
                 <Header />
             </div>
             <div className='row'>
-                <div className='col-md-2'><NavBar country={selectedCountry} /></div>
+                <div className='col-md-2' style={{"background-color":"aliceblue"}}><NavBar country={selectedCountry} /></div>
                 <div className="col-md-1 vl"></div>
                 <div className='col-md-8 main-container'>
                     <div className="row">
