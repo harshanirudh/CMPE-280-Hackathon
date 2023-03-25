@@ -20,7 +20,7 @@ function App() {
           <Route path="/imports" element={<FoodChartPage />}></Route>
           <Route path="/yield" element={<Predict />}></Route>
           <Route path="/bananas" element={<Bananas />}></Route>
-          <Route path="/mangos" element={<Mangoes />}></Route>
+          <Route path="/mangoes" element={<Mangoes />}></Route>
           <Route path="/walnuts" element={<Walnuts />}></Route>
 
         </Routes>
