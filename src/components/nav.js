@@ -163,6 +163,9 @@ const NavBar = (props) => {
             <Link to="/walnuts">Walnuts</Link>
           </li>
         </div>
+        <div className="nav-main-elements" >
+            <Link to="/Sensors">Sensors</Link>
+        </div>
       </div>
     </div>
   );

@@ -62,14 +62,14 @@ export default function Home() {
                   getAriaLabel={() => "Temperature range"}
                   value={range}
                   onChange={rangeChange}
-                  min={1990}
+                  min={1960}
                   max={2020}
                   valueLabelDisplay="auto"
 
                   //   getAriaValueText={valuetext}
                 />
                 <p>
-                  Year: <span id="demo">{range}</span>
+                  Year: <span id="demo">{`${range[0]}-${range[1]}`}</span>
                 </p>
               </div>
             </div>
