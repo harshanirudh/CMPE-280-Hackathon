@@ -607,7 +607,8 @@ export default function FoodChartPage(props) {
               <Form.Group >
                 <Form.Label>Year: </Form.Label>
                 <Form.Select value={year} required name='from' onChange={e => setYear(e.target.value)}>
-                  <option value="">Select Departure Airport</option>
+                  <option value="">Select Year</option>
+                  <option value="2021">2021</option>
                   <option value="2020">2020</option>
                   <option value="2019">2019</option>
                   <option value="2018">2018</option>
