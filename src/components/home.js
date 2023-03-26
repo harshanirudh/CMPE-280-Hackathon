@@ -6,12 +6,13 @@ import { HTML5Backend } from "react-dnd-html5-backend";
 import { useDrag } from "react-dnd";
 import { useDrop } from "react-dnd";
 import { useState } from "react";
+import { Slider } from "@mui/material";
 
 export default function Home() {
   const [selectedCountry, setSelectedCountry] = useState("China");
   const [persona, setSelectedPersona] = useState("Researcher");
   const [basket, setBasket] = useState([]);
-  const [range, setRange] = useState("1990");
+  const [range, setRange] = useState([1960, 2020]);
 
   const handleCountryChange = (country) => {
     setSelectedCountry(country);
@@ -29,10 +30,8 @@ export default function Home() {
 
   const [annotations, setAnnotations] = useState([]);
 
-  const rangeChange = () => {
-    const v = document.getElementById("myRange")?.value;
-    console.log("change", v);
-    setRange(v);
+  const rangeChange = (event, newValue) => {
+    setRange(newValue);
   };
 
   return (
@@ -42,7 +41,7 @@ export default function Home() {
       </div>
       <div className="row">
         <div className="col-md-2" style={{ "background-color": "#333" }}>
-          <NavBar country={selectedCountry} />
+          <NavBar country={selectedCountry} range={range} />
         </div>
         <div className="col-md-1 vl"></div>
         <div className="col-md-8 main-container">
@@ -54,14 +53,16 @@ export default function Home() {
                 <br />
                 <br />
                 <br />
-                <input
-                  type="range"
-                  min="1990"
-                  max="2020"
-                  className="slider"
-                  id="myRange"
+                <Slider
+                  getAriaLabel={() => "Temperature range"}
+                  value={range}
                   onChange={rangeChange}
-                ></input>
+                  min={1990}
+                  max={2020}
+                  valueLabelDisplay="auto"
+                  step={1}
+                  //   getAriaValueText={valuetext}
+                />
                 <p>
                   Year: <span id="demo">{range}</span>
                 </p>
