@@ -7,15 +7,18 @@ import { useDrag } from "react-dnd";
 import { useDrop } from "react-dnd";
 import { useState } from "react";
 import { Slider } from "@mui/material";
+import { useDispatch } from "react-redux";
+import { setCountry, setRRange } from "../CountryRangeSlice";
 
 export default function Home() {
   const [selectedCountry, setSelectedCountry] = useState("China");
   const [persona, setSelectedPersona] = useState("Researcher");
   const [basket, setBasket] = useState([]);
   const [range, setRange] = useState([1960, 2020]);
-
+  const dispatch = useDispatch();
   const handleCountryChange = (country) => {
     setSelectedCountry(country);
+    dispatch(setCountry(country));
     setBasket([]);
   };
 
@@ -32,6 +35,8 @@ export default function Home() {
 
   const rangeChange = (event, newValue) => {
     setRange(newValue);
+    console.log(newValue);
+    dispatch(setRRange(newValue));
   };
 
   return (
@@ -60,7 +65,7 @@ export default function Home() {
                   min={1990}
                   max={2020}
                   valueLabelDisplay="auto"
-                  step={1}
+
                   //   getAriaValueText={valuetext}
                 />
                 <p>
@@ -78,7 +83,6 @@ export default function Home() {
                 <option>INDIA</option>
                 <option>USA</option>
                 <option>EQUADOR</option>
-                <option>SRI LANKA</option>
               </select>
               <br />
               <select

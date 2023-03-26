@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Chart } from "react-google-charts";
+import { useSelector } from "react-redux";
 
 export const data = [
   ["Year", "India", "China", "US"],
@@ -67,21 +68,23 @@ export const data = [
 ];
 export function DataChart(props) {
   const [chartData, setchartData] = useState([]);
+  const range = useSelector((state) => state.countryRange.range);
+  const country = useSelector((state) => state.countryRange.country);
   const filterData = () => {
-    let filteredData = [["year", props.country]];
+    let filteredData = [["year", country]];
     let col = 0;
-    if (props.country == "USA") {
+    if (country == "USA") {
       col = 3;
-    } else if (props.country == "INDIA") {
+    } else if (country == "INDIA") {
       col = 1;
-    } else if (props.country == "China") {
+    } else if (country == "China") {
       col = 2;
     } else {
       setchartData(data);
       return;
     }
-    let startYear = props.range[0];
-    let endYear = props.range[1];
+    let startYear = range[0];
+    let endYear = range[1];
     for (let i = 1; i < data.length; i++) {
       let currYear = data[i][0];
       if (currYear <= endYear && currYear >= startYear) {
@@ -91,32 +94,21 @@ export function DataChart(props) {
     setchartData(filteredData);
   };
 
-  const options = {
-    chart: {
-      // title: "GDP data for 3 Countries",
-      // subtitle: "Denoted in USD",
-    },
-    vAxis: {
-      title: "Year",
-      format: "decimal",
-    },
-  };
-
   useEffect(() => {
-    console.log(props.range, props.country);
+    console.log(range, country);
     filterData();
-  }, [props.range, props.country]);
+  }, [range, country]);
 
   return (
     <div style={{ marginBottom: "20px" }}>
       <Chart
-        chartType="Line"
+        chartType="LineChart"
         width="100%"
         height="250px"
         data={chartData}
         options={{
-          vAxis: {
-            format: "yyyy",
+          hAxis: {
+            format: "#", // Use 'decimal' format to display integers without commas
           },
         }}
       />
